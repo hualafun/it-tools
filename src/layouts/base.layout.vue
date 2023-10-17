@@ -56,18 +56,16 @@ const tools = computed<ToolCategory[]>(() => [
         <div class="footer">
           <div>
             IT-Tools
-
-            <c-link target="_blank" rel="noopener" :href="`https://github.com/CorentinTh/it-tools/tree/v${version}`">
+            <c-link target="_blank" rel="noopener" :href="`https://github.com/hualafun/it-tools/tree/v${version}`">
               v{{ version }}
             </c-link>
-
             <template v-if="commitSha && commitSha.length > 0">
               -
               <c-link
                 target="_blank"
                 rel="noopener"
                 type="primary"
-                :href="`https://github.com/CorentinTh/it-tools/tree/${commitSha}`"
+                :href="`https://github.com/hualafun/it-tools/tree/${commitSha}`"
               >
                 {{ commitSha }}
               </c-link>
@@ -75,8 +73,8 @@ const tools = computed<ToolCategory[]>(() => [
           </div>
           <div>
             © {{ new Date().getFullYear() }}
-            <c-link target="_blank" rel="noopener" href="https://github.com/CorentinTh">
-              Corentin Thomasset
+            <c-link target="_blank" rel="noopener" href="https://github.com/hualafun">
+              Hualafun
             </c-link>
           </div>
         </div>
@@ -112,7 +110,7 @@ const tools = computed<ToolCategory[]>(() => [
           <NavbarButtons v-if="!styleStore.isSmallScreen" />
         </div>
 
-        <c-tooltip position="bottom" tooltip="Support IT Tools development">
+        <!-- <c-tooltip position="bottom" tooltip="Support IT Tools development">
           <c-button
             round
             href="https://www.buymeacoffee.com/cthmsst"
@@ -125,7 +123,7 @@ const tools = computed<ToolCategory[]>(() => [
             Buy me a coffee
             <NIcon v-if="!styleStore.isSmallScreen" :component="Heart" ml-2 />
           </c-button>
-        </c-tooltip>
+        </c-tooltip> -->
       </div>
       <slot />
     </template>

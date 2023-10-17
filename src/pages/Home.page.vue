@@ -20,7 +20,7 @@ const { t } = useI18n();
           <ColoredCard title="You like it-tools?" :icon="Heart">
             Give us a star on
             <a
-              href="https://github.com/CorentinTh/it-tools"
+              href="https://github.com/didalol/it-tools"
               rel="noopener"
               target="_blank"
               aria-label="IT-Tools' GitHub repository"
@@ -39,7 +39,7 @@ const { t } = useI18n();
 
       <transition name="height">
         <div v-if="toolStore.favoriteTools.length > 0">
-          <n-h3>Your favorite tools</n-h3>
+          <n-h3>收藏列表</n-h3>
           <n-grid x-gap="12" y-gap="12" cols="1 400:2 800:3 1200:4 2000:8">
             <n-gi v-for="tool in toolStore.favoriteTools" :key="tool.name">
               <ToolCard :tool="tool" />
@@ -57,7 +57,7 @@ const { t } = useI18n();
         </n-grid>
       </div>
 
-      <n-h3>All the tools</n-h3>
+      <n-h3>所有工具</n-h3>
       <n-grid x-gap="12" y-gap="12" cols="1 400:2 800:3 1200:4 2000:8">
         <n-gi v-for="tool in toolStore.tools" :key="tool.name">
           <transition>

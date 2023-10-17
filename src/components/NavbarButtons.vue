@@ -11,7 +11,7 @@ const { isDarkTheme } = toRefs(styleStore);
     <c-button
       circle
       variant="text"
-      href="https://github.com/CorentinTh/it-tools"
+      href="https://github.com/hualafun/it-tools"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="IT-Tools' GitHub repository"
@@ -20,7 +20,7 @@ const { isDarkTheme } = toRefs(styleStore);
     </c-button>
   </c-tooltip>
 
-  <c-tooltip tooltip="Twitter account" position="bottom">
+  <!-- <c-tooltip tooltip="Twitter account" position="bottom">
     <c-button
       circle
       variant="text"
@@ -37,7 +37,7 @@ const { isDarkTheme } = toRefs(styleStore);
     <c-button circle variant="text" to="/about" aria-label="About">
       <n-icon size="25" :component="InfoCircle" />
     </c-button>
-  </c-tooltip>
+  </c-tooltip> -->
   <c-tooltip :tooltip="isDarkTheme ? 'Light mode' : 'Dark mode'" position="bottom">
     <c-button circle variant="text" aria-label="Toggle dark/light mode" @click="() => styleStore.toggleDark()">
       <n-icon v-if="isDarkTheme" size="25" :component="Sun" />
