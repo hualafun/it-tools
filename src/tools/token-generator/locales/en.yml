@@ -1,9 +1,9 @@
 tools:
   token-generator:
-    title: Token generator
-    description: Generate random string with the chars you want, uppercase or lowercase letters, numbers and/or symbols.
+    title: Token 生成器
+    description: 生成随机字符串与您想要的字符:大写或小写字母，数字和/或符号。
 
-    uppercase: Uppercase (ABC...)
-    lowercase: Lowercase (abc...)
-    numbers: Numbers (123...)
-    symbols: Symbols (!-;...)
+    uppercase: 大写 (ABC...)
+    lowercase: 小写 (abc...)
+    numbers: 数字 (123...)
+    symbols: 符号 (!-;...)
