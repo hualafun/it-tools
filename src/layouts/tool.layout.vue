@@ -32,28 +32,20 @@ const toolDescription = computed<string>(() => t(`tools.${i18nKey.value}.descrip
 
 <template>
   <BaseLayout>
-    <div class="tool-layout">
-      <div class="tool-header">
-        <div flex flex-nowrap items-center justify-between>
-          <n-h1>
-            {{ toolTitle }}
-          </n-h1>
-
-          <div>
-            <FavoriteButton :tool="{ name: route.meta.name } as Tool" />
-          </div>
+    <div class="flex flex-col gap-8 my-8">
+      <div>
+        <div class="flex gap-1">
+          <div class="text-2xl font-bold">{{ toolTitle }}</div>
+          <FavoriteButton :tool="{ name: route.meta.name } as Tool" />
         </div>
-
-        <div class="separator" />
-
-        <div class="description">
+        <div class="h-1 w-5 bg-gradient  opacity-70" />
+        <div class="opacity-70">
           {{ toolDescription }}
         </div>
       </div>
-    </div>
-
-    <div class="tool-content">
-      <slot />
+      <div class="gap-8 flex flex-col">
+        <slot />
+      </div>
     </div>
   </BaseLayout>
 </template>
