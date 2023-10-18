@@ -75,7 +75,7 @@ import { tool as xmlFormatter } from './xml-formatter';
 
 export const toolsByCategory: ToolCategory[] = [
   {
-    name: 'Crypto',
+    name: '密码/加密',
     components: [tokenGenerator, hashText, bcrypt, uuidGenerator, ulidGenerator, cypher, bip39, hmacGenerator, rsaKeyPairGenerator, passwordStrengthAnalyser],
   },
   {
