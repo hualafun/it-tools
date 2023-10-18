@@ -15,7 +15,7 @@ const { copy } = useCopy({ source: uuids, text: 'UUIDs copied to the clipboard' 
 <template>
   <div>
     <div class="flex gap-3 items-center">
-      Quantity :
+      数量 :
       <n-input-number v-model:value="count" :min="1" :max="50" placeholder="UUID quantity" />
     </div>
 

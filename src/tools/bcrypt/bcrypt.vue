@@ -16,7 +16,7 @@ const compareMatch = computed(() => compareSync(compareString.value, compareHash
 </script>
 
 <template>
-  <div class="flex gap-8 max-2xl:flex-col flex-row">
+  <div class="flex gap-4 max-2xl:flex-col flex-row">
     <c-card class="flex-1" title="Hash">
       <c-input-text
         v-model:value="input"
