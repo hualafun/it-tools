@@ -38,14 +38,12 @@ const toolDescription = computed<string>(() => t(`tools.${i18nKey.value}.descrip
           <div class="text-2xl font-bold">{{ toolTitle }}</div>
           <FavoriteButton :tool="{ name: route.meta.name } as Tool" />
         </div>
-        <div class="h-1 w-5 bg-gradient  opacity-70" />
+        <div class="h-1 w-5 bg-gradient opacity-70" />
         <div class="opacity-70">
           {{ toolDescription }}
         </div>
       </div>
-      <div class="gap-8 flex flex-col">
-        <slot />
-      </div>
+      <slot />
     </div>
   </BaseLayout>
 </template>
