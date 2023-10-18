@@ -17,58 +17,76 @@ const decryptOutput = computed(() =>
 </script>
 
 <template>
-  <c-card title="Encrypt">
-    <div flex gap-3>
-      <c-input-text
-        v-model:value="cypherInput"
-        label="Your text:"
-        placeholder="The string to cypher"
-        rows="4"
-        multiline raw-text monospace autosize flex-1
-      />
-      <div flex flex-1 flex-col gap-2>
-        <c-input-text v-model:value="cypherSecret" label="Your secret key:" clearable raw-text />
-
-        <c-select
-          v-model:value="cypherAlgo"
-          label="Encryption algorithm:"
-          :options="Object.keys(algos).map((label) => ({ label, value: label }))"
+  <div class="flex gap-4 max-2xl:flex-col flex-row">
+    <c-card class="flex-1" title="加密">
+      <div flex gap-3>
+        <c-input-text
+          v-model:value="cypherInput"
+          label="待加密文本:"
+          placeholder="The string to cypher"
+          rows="4"
+          multiline
+          raw-text
+          monospace
+          autosize
+          flex-1
         />
-      </div>
-    </div>
-    <c-input-text
-      label="Your text encrypted:"
-      :value="cypherOutput"
-      rows="3"
-      placeholder="Your string hash"
-      multiline monospace readonly autosize mt-5
-    />
-  </c-card>
-  <c-card title="Decrypt">
-    <div flex gap-3>
-      <c-input-text
-        v-model:value="decryptInput"
-        label="Your encrypted text:"
-        placeholder="The string to cypher"
-        rows="4"
-        multiline raw-text monospace autosize flex-1
-      />
-      <div flex flex-1 flex-col gap-2>
-        <c-input-text v-model:value="decryptSecret" label="Your secret key:" clearable raw-text />
+        <div flex flex-1 flex-col gap-2>
+          <c-input-text v-model:value="cypherSecret" label="秘钥:" clearable raw-text />
 
-        <c-select
-          v-model:value="decryptAlgo"
-          label="Encryption algorithm:"
-          :options="Object.keys(algos).map((label) => ({ label, value: label }))"
-        />
+          <c-select
+            v-model:value="cypherAlgo"
+            label="加密算法:"
+            :options="Object.keys(algos).map((label) => ({ label, value: label }))"
+          />
+        </div>
       </div>
-    </div>
-    <c-input-text
-      label="Your decrypted text:"
-      :value="decryptOutput"
-      placeholder="Your string hash"
-      rows="3"
-      multiline monospace readonly autosize mt-5
-    />
-  </c-card>
+      <c-input-text
+        label="加密后文本:"
+        :value="cypherOutput"
+        rows="3"
+        placeholder="Your string hash"
+        multiline
+        monospace
+        readonly
+        autosize
+        mt-5
+      />
+    </c-card>
+    <c-card class="flex-1" title="解密">
+      <div flex gap-3>
+        <c-input-text
+          v-model:value="decryptInput"
+          label="待解密文本:"
+          placeholder="The string to cypher"
+          rows="4"
+          multiline
+          raw-text
+          monospace
+          autosize
+          flex-1
+        />
+        <div flex flex-1 flex-col gap-2>
+          <c-input-text v-model:value="decryptSecret" label="密钥:" clearable raw-text />
+
+          <c-select
+            v-model:value="decryptAlgo"
+            label="加密算法:"
+            :options="Object.keys(algos).map((label) => ({ label, value: label }))"
+          />
+        </div>
+      </div>
+      <c-input-text
+        label="解密后文本:"
+        :value="decryptOutput"
+        placeholder="Your string hash"
+        rows="3"
+        multiline
+        monospace
+        readonly
+        autosize
+        mt-5
+      />
+    </c-card>
+  </div>
 </template>
